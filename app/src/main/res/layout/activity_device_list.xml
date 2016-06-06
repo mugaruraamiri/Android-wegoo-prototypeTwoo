@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:elevation="6dp"
+    tools:context="com.hehelabs.wegoo1.DeviceListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uperForm"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/demoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="@string/app_title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/progressBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="@string/refreshing"
+            android:padding="8dp"
+            android:textSize="18sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+            android:indeterminate="true" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/deviceList"
+        android:layout_below="@+id/uperForm"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"/>
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Cancel"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorPrimary"/>
+
+</RelativeLayout>
